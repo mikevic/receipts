@@ -44,13 +44,13 @@ module Receipts
         move_down 60
 
         if company.has_key? :logo
-          image open(company.fetch(:logo)), height: 32
+          image open(company.fetch(:logo)), height: 60
         else
           move_down 32
         end
 
         move_down 8
-        text "<color rgb='a6a6a6'>RECEIPT FOR CHARGE ##{id}</color>", inline_format: true
+        text "<color rgb='a6a6a6'>RECEIPT FOR DONATION ##{id}</color>", inline_format: true
 
         move_down 30
         text message, inline_format: true, size: 12.5, leading: 4
